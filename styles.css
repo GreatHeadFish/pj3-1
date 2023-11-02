@@ -1,0 +1,529 @@
+.center-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    transform-origin: center center;
+    scale: 1.5;
+    background-color: lightyellow;
+}
+
+@media (max-width: 1200px) {
+  .center-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    transform-origin: center center;
+    scale: 0.9;
+  }
+}
+
+@media (max-width: 700px) {
+  .center-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    transform: rotate(90deg);
+    transform-origin: center center;
+    scale: 1.1;
+  }
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 100% 0;
+  }
+  20% {
+    background-position: 50% 0;
+  }
+  40% {
+      background-position: 0 0;
+  }
+  60% {
+    background-position: 0 0;
+  }
+  80% {
+    background-position: 50% 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(20, 2fr); 
+    max-width: 1000px;
+    background-image: linear-gradient(to left, blueviolet,lightyellow);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: gradientAnimation 10s linear infinite;
+    transition: background-position 10s;
+    border-radius: 15px 15px 15px 15px;
+  }
+
+  @keyframes colorChange1 {
+    0% {
+        border: 1.5px solid white;
+        background-color: yellow;
+        opacity: 0;
+        transform: translateX(0);
+        scale: 0.5;
+  
+    }
+    25% {
+        border: 1.5px solid white;
+        background-color: yellow;
+        opacity: 0.5;
+        transform: translateX(-5px);
+        scale: 0.6;
+    }
+    50% {
+        border: 1.5px solid white;
+        background-color: yellow;
+        opacity: 1;
+        transform: translateX(-8px);
+        scale: 0.8;
+    }
+    75% {
+      border: 1.5px solid white;
+      background-color: yellow;
+      opacity: 0.5;
+      transform: translateX(-12px);
+      scale: 1;
+    }
+  
+    100% {
+      border: 1.5px solid white;
+      background-color: yellow;
+      opacity: 0;
+      transform: translateX(-13px);
+  }
+  }
+
+  @keyframes colorChange2 {
+    0% {
+        border: 1.5px solid white;
+        opacity: 0;
+        transform: translateX(-5px) ;
+        scale: 0.5;
+    }
+    25% {
+        border: 1.5px solid white;
+        opacity: 0.4;
+        transform: translateX(-8px);
+        scale: 0.8;
+    }
+    50% {
+        border: 1.5px solid white;
+        opacity: 0.8;
+        transform: translateX(-12px);
+    }
+    75% {
+      border: 1.5px solid white;
+      opacity: 0.4;
+      transform: translateX(-14px);
+      scale: 1;
+    }
+  
+    100% {
+      border: 1.5px solid white;
+      opacity: 0;
+      transform: translateX(-15px);
+      scale: 0.8;
+  }
+  }
+
+  @keyframes colorChange3 {
+    0% {
+      border: 10px solid white;
+      background-color: yellow;
+    }
+    25% {
+      border: 10px solid white;
+      background-color: yellow;
+    }
+    50% {
+      border: 10px solid white;
+      background-color: yellow;
+    }
+    75% {
+      border: 10px solid white;
+      background-color: yellow;
+    }
+  
+    100% {
+      border: 10px solid white;
+      background-color: yellow;
+  }
+  }
+
+
+  .bubble10 {
+    width: 15px;
+    height: 15px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    align-self: end;
+    justify-self:end;
+    animation: colorChange1 3s infinite;
+}
+
+  .bubble14 {
+    width: 60px;
+    height: 60px;
+    border: 1.5px solid white;
+    background-color: yellow;
+    border-radius: 50%;
+    align-self: center;
+    justify-self:end;
+    animation: colorChange1 3s linear infinite;
+}
+
+@keyframes colorChange3 {
+  0% {
+    border: 10px solid white;
+    background-color: yellow;
+  }
+  25% {
+    border: 10px solid white;
+    background-color: lightyellow;
+}
+50% {
+  border: 10px solid white;
+  background-color: white;
+}
+
+75% {
+  border: 10px solid white;
+  background-color: lightyellow;
+}
+
+  100% {
+    border: 10px solid white;
+    background-color: yellow;
+}
+}
+
+  .cup17 {
+    width: 120px;
+    height: 100px;
+    border: 10px solid white;
+    background-color: yellow;
+    border-radius: 0px 0px 30px 30px;
+    align-self: end;
+    justify-self:center;
+    animation: colorChange3 10s infinite;
+  }
+  .cup17:active {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(0px, 8px);
+    }
+    40% {
+        transform: translate(0px, -8px);
+    }
+    60% {
+        transform: translate(0px, 0px);
+    }
+    80% {
+        transform: translate(8px, 0px);
+    }
+    100% {
+      transform: translate(-10px, 0px);
+  }
+}
+
+  .cup17:hover {
+    transform: scale(1.02); 
+  }
+
+  .uppertrigger19 {
+    width: 65px;
+    height: 20px;
+    background-color: white;
+    border-radius: 1px 1px 5px 5px;
+    align-self: end;
+    justify-self:center;
+  }
+
+  .uppertrigger19:hover {
+    transform: scale(1.05); 
+  }
+
+  .uppertrigger19:active,
+  .uppertrigger19:focus {
+    transform: scale(1.05) translateY(10px);
+  }
+  .bubble32 {
+    width: 15px;
+    height: 15px;
+    border: 1.5px solid white;
+    background-color: yellow;
+    border-radius: 50%;
+    align-self: start;
+    justify-self:start;
+    animation: colorChange1 4s linear infinite;
+}
+
+  .bubble33 {
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid white;
+    background-color: white;
+    border-radius: 50%;
+    align-self: end;
+    justify-self:center;
+    animation: colorChange2 4s linear infinite;
+}
+
+.lowercup37 {
+    width: 70px;
+    height: 25px;
+    background-color: white;
+    place-self: center
+  }
+
+  .lowertrigger39 {
+    width: 20px;
+    height: 25px;
+    background-color: white;
+    place-self: center;
+  }
+
+  .bubble51 {
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid white;
+    background-color: yellow;
+    border-radius: 50%;
+    place-self: center;
+    animation: colorChange1 4s linear infinite;
+  }
+
+  .bubble53 {
+    width: 30px;
+    height: 30px;
+    border: 1.5px solid white;
+    background-color: white;
+    border-radius: 50%;
+    align-self: end;
+    justify-self:center;
+    animation: colorChange2 2s linear infinite;
+}
+
+  .bubble54 {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid white;
+  background-color: white;
+  border-radius: 50%;
+  place-self: center;
+  animation: colorChange2 2s linear infinite;
+
+}
+
+
+  .noz55 {
+    width: 35px;
+    height: 40px;
+    background-color: white;
+    border-radius: 0px 17px 17px 0px;
+    align-self: center;
+    justify-self:end;
+  }
+
+  .noz55:active,
+  .noz55:focus {
+    width: 125%;
+    transform: scale(0.9);
+  }
+
+  .airbrushbody56 {
+    width: 55px;
+    height: 50px;
+    background-color: white;
+    border-radius: 17px 0px 0px 17px;
+    place-self: center;
+  }
+
+  .airbrushbody57 {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    place-self: end;
+  }
+
+  .airbrushbody58 {
+    width: 80px;
+    height: 50px;
+    background-color: white;
+    place-self: end;
+  }
+
+  .airbrushbody59 {
+    width: 90px;
+    height: 50px;
+    background-color: white;
+    place-self: start;
+  }
+
+  .airbrushbody60 {
+    width: 30px;
+    height: 50px;
+    background-color: white;
+    place-self: start;
+  }
+
+  .bubble70 {
+    width: 25px;
+    height: 25px;
+    border: 1.5px solid white;
+    background-color: yellow;
+    border-radius: 50%;
+    place-self: center;
+    animation: colorChange1 3s linear infinite;
+  
+  }
+
+  .connect77 {
+    width: 35px;
+    height: 30px;
+    background-color: white;
+    border-radius: 0px 0px 0px 4px;
+    place-self: end;
+  }
+  .connect78 {
+    width: 35px;
+    height: 30px;
+    background-color: white;
+    border-radius: 0px 0px 4px 0px;
+    place-self: start;
+  }
+
+  .bubble92 {
+    width: 35px;
+    height: 35px;
+    border: 1.5px solid white;
+    background-color: yellow;
+    border-radius: 50%;
+    align-self: start;
+    justify-self:end;
+    animation: colorChange1 3s linear infinite;
+}
+
+.bubble94 {
+    width: 15px;
+    height: 15px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    background-color: white;
+    align-self: start;
+    justify-self:start;
+    animation: colorChange2 4s linear infinite;
+}
+
+
+  .lowerconnect97 {
+    width: 22px;
+    height: 40px;
+    background-color: white;
+    border-radius: 0px 0px 0px 3px;
+    place-self: end;
+  }
+
+  .lowerconnect98 {
+    width: 22px;
+    height: 40px;
+    background-color: white;
+    border-radius: 0px 0px 3px 0px;
+    place-self: start;
+  }
+
+  .upperline117 {
+    width: 7px;
+    height: 40px;
+    background-color: white;
+    place-self: end;
+  }
+
+  .upperline118 {
+    width: 7px;
+    height: 40px;
+    background-color: white;
+    place-self: start;
+  }
+
+  .midline137 {
+    width: 7px;
+    height: 40px;
+    background-color: white;
+    place-self: end;
+  }
+
+
+  .midline138 {
+    width: 7px;
+    height: 40px;
+    background-color: white;
+    place-self: start;
+  }
+
+  .space157 {
+    width: 7px;
+    height: 12px;
+    background-color: white;
+    border-radius: 0px 0px 0px 3px;
+    align-self: start;
+    justify-self:end;
+  }
+
+  .space158 {
+    width: 80px;
+    height: 12px;
+    background-color: white;
+    align-self: start;
+    justify-self:center;
+  }
+
+  .space159 {
+    width: 90px;
+    height: 12px;
+    background-color: white;
+    align-self: start;
+    justify-self:start;
+  }
+
+  .space160 {
+    width: 12px;
+    height: 30px;
+    background-color: white;
+    border-radius: 0px 3px 0px 0px;
+    align-self: flex-start;
+    justify-self:start;
+  }
+
+
+.colorChange1, .colorChange2,.colorChange3,.gradientAnimation {
+    animation-play-state: paused;
+}
+
+
+
+
